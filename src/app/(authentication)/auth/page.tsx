@@ -8,7 +8,7 @@ import { z } from 'zod';
 import { Provider } from '@supabase/supabase-js';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-
+import Image from 'next/image';
 import Typography from '@/components/ui/typography';
 import { Button } from '@/components/ui/button';
 import {
@@ -84,12 +84,11 @@ const AuthPage = () => {
     <div className='min-h-screen p-5 grid text-center place-content-center bg-white'>
       <div className='max-w-[450px]'>
         <div className='flex justify-center items-center gap-3 mb-4'>
-          <BsSlack size={30} />
-          <Typography text='Slackzz' variant='h2' />
+          <Image src='/ayobiz.png' alt='logo' width={150} height={50} />
         </div>
 
         <Typography
-          text='Sign in to your Slackzz'
+          text='Welcome to Ayobiz'
           variant='h2'
           className='mb-3'
         />
@@ -154,7 +153,7 @@ const AuthPage = () => {
 
                 <Button
                   variant='secondary'
-                  className='bg-primary-dark hover:bg-primary-dark/90 w-full my-5 text-white'
+                  className='bg-[#0d63a6] hover:bg-[#0d63a6]/80 w-full my-5 text-white'
                   type='submit'
                 >
                   <Typography text='Sign in with Email' variant='p' />
